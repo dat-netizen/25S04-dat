@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trò Chơi Đập Gạch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <h1>🧱 Trò Chơi Đập Gạch 🎾</h1>
+
+        <div id="control-panel">
+            <p>Số lần NG (Mất Mạng) còn lại: <span id="ng-count">10</span></p>
+            
+            <label for="speed-select">Chọn Tốc Độ Bóng:</label>
+            <select id="speed-select">
+                <option value="slow">Chậm</option>
+                <option value="normal" selected>Trung Bình</option>
+                <option value="fast">Nhanh</option>
+            </select>
+            
+            <button id="start-button">BẮT ĐẦU (START)</button>
+        </div>
+
+        <canvas id="gameCanvas" width="600" height="400"></canvas>
+        
+        <div id="status-message" class="hidden"></div>
+
+        <div id="how-to-play">
+            <h3>📖 Hướng Dẫn Sử Dụng</h3>
+            <ul>
+                <li>Sử dụng phím **Mũi Tên Trái (←)** và **Mũi Tên Phải (→)** để di chuyển thanh đỡ (racket).</li>
+                <li>Mục tiêu là **đỡ bóng** để đập hết tất cả các viên gạch.</li>
+                <li>Nếu bóng rơi khỏi đáy màn hình, bạn bị tính **1 lần NG (Mất Mạng)**.</li>
+                <li>Trò chơi kết thúc khi bạn bị **10 lần NG**.</li>
+                <li>Nhấn **BẮT ĐẦU** để khởi động hoặc chơi lại.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
